@@ -1,0 +1,11 @@
+WebStorm 2025.3.2
+Plugin dev.austin.christmas:0.1.0 against WS-253.30387.83: Compatible. 3 usages of experimental API
+Experimental API usages (3):
+    #Experimental API enum com.intellij.openapi.editor.markup.CustomHighlighterOrder reference
+        Experimental API enum com.intellij.openapi.editor.markup.CustomHighlighterOrder is referenced in dev.austin.christmas.ChristmasBackgroundService.Background$1.getOrder() : CustomHighlighterOrder. This enum can be changed in a future release leading to incompatibilities
+    #Experimental API field com.intellij.openapi.editor.markup.CustomHighlighterOrder.BEFORE_BACKGROUND access
+        Experimental API field com.intellij.openapi.editor.markup.CustomHighlighterOrder.BEFORE_BACKGROUND : com.intellij.openapi.editor.markup.CustomHighlighterOrder is accessed in dev.austin.christmas.ChristmasBackgroundService.Background$1.getOrder() : CustomHighlighterOrder. This field can be changed in a future release leading to incompatibilities
+    #Experimental API method com.intellij.openapi.editor.markup.CustomHighlighterRenderer.getOrder() is overridden
+        Experimental API method com.intellij.openapi.editor.markup.CustomHighlighterRenderer.getOrder() : com.intellij.openapi.editor.markup.CustomHighlighterOrder is overridden in class dev.austin.christmas.ChristmasBackgroundService.Background$1. This method can be changed in a future release leading to incompatibilities
+    Plugin can probably be enabled or disabled without IDE restart
+BUILD SUCCESSFUL in 28s

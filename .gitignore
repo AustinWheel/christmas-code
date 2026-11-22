@@ -1,0 +1,16 @@
+.gradle/
+.intellijPlatform/
+build/
+.idea/
+*.iml
+bin/
+.classpath
+.project
+.settings/
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.keystore

@@ -1,0 +1,34 @@
+<idea-plugin>
+    <id>dev.austin.christmas</id>
+    <name>Christmas Code</name>
+    <vendor url="https://github.com/AustinWheel">Austin Wheeler</vendor>
+    <description><![CDATA[
+        <p>An animated ASCII Christmas tree and falling snow behind your code.</p>
+        <ul>
+            <li>Rotating character art, warm garlands, glowing ornaments, and presents.</li>
+            <li>One continuous scene across split editors, or a separate tree in each pane.</li>
+            <li>Adjustable background opacity and optional automatic activation on project open.</li>
+            <li>Animation pauses while the IDE window is inactive.</li>
+        </ul>
+        <p>Enable it from Tools &gt; Toggle Christmas Background.
+        Customize it in Settings &gt; Tools &gt; Christmas Code.</p>
+        <p><a href="https://github.com/AustinWheel/christmas-code">Source code and documentation</a> |
+        <a href="https://github.com/AustinWheel/christmas-code/issues">Report an issue</a></p>
+    ]]></description>
+    <change-notes><![CDATA[
+        <p>Initial release: animated Christmas scene, shared split-editor background,
+        adjustable opacity, and optional automatic activation.</p>
+    ]]></change-notes>
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="dev.austin.christmas.ChristmasStartupActivity"/>
+        <applicationConfigurable parentId="tools" id="dev.austin.christmas.settings"
+                displayName="Christmas Code" instance="dev.austin.christmas.ChristmasConfigurable"/>
+    </extensions>
+    <actions>
+        <action id="ChristmasCode.Toggle" class="dev.austin.christmas.ToggleChristmasAction"
+                text="Toggle Christmas Background" description="Enable or disable the animated editor background">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
